@@ -1,4 +1,4 @@
-# Temp Mail Worker
+# iLove Temp Mail Worker
 
 Cloudflare Worker that acts as a temporary email inbox.
 
@@ -65,7 +65,7 @@ If you have an unused domain and would like to contribute, you can donate it by 
 
 ## Community
 
-Here are some projects built by the community using or integrating with Temp Mail Worker:
+Here are some projects built by the community using or integrating with iLove Temp Mail Worker:
 
 *   **Rust Library**: [doomed-neko/tmapi](https://github.com/doomed-neko/tmapi/)
 *   **Go Library**: [blockton/barid](https://github.com/blockton/barid)
@@ -132,7 +132,7 @@ Before you begin, ensure you have following:
 3.  **Enable Email Routing** if it's not already enabled.
 4.  **Create a Catch-all Rule**:
     *   For "Action", choose "Send to Worker".
-    *   Select your Worker (e.g., `temp-mail`).
+    *   Select your Worker (e.g., `ilove-temp-mail`).
     *   Click "Save".
 
 ## Running the Worker

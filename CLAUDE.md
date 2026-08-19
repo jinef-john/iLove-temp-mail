@@ -1,4 +1,4 @@
-# Temp Mail Worker - Claude Code Instructions
+# iLove Temp Mail Worker - Claude Code Instructions
 
 This repository is a **Cloudflare Workers-based temporary email service** that provides disposable email addresses with attachment support. The service receives emails via Cloudflare Email Routing, stores them in D1 database, and provides REST API endpoints for managing emails and attachments.
 

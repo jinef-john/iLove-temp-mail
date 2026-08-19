@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "temp-mail",
+	"name": "ilove-temp-mail",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-07-15",
 	"observability": {
@@ -13,15 +13,15 @@
 	"d1_databases": [
 		{
 			"binding": "D1",
-			"database_name": "temp-mail-d1",
+			"database_name": "ilove-temp-mail-d1",
 			"database_id": "7a8d8ce6-df0e-4c56-8a7a-e3f5895a4771" // Replace with the ID from `bun run db:create`
 		}
 	],
 	"r2_buckets": [
 		{
 			"binding": "R2",
-			"bucket_name": "temp-mail-attachments",
-			"preview_bucket_name": "temp-mail-attachments-preview"
+			"bucket_name": "ilove-temp-mail-attachments",
+			"preview_bucket_name": "ilove-temp-mail-attachments-preview"
 		}
 	],
 	"triggers": {
