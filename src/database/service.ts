@@ -93,6 +93,19 @@ export class DatabaseService {
 		}
 	}
 
+	async getEmailIdsByRecipient(emailAddress: string) {
+		try {
+			const { results, error } = await this.db
+				.prepare(`SELECT id FROM emails WHERE to_address = ?`)
+				.bind(emailAddress)
+				.all<{ id: string }>();
+			return { ids: results.map((row) => row.id), error };
+		} catch (e: unknown) {
+			const error = e instanceof Error ? e : new Error(String(e));
+			return { ids: [] as string[], error };
+		}
+	}
+
 	async deleteEmailsByRecipient(emailAddress: string) {
 		try {
 			const { meta, error } = await this.db

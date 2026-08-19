@@ -7,6 +7,7 @@ import { DOMAINS_SET } from "@/config/domains";
 
 // Database imports
 import { createDatabaseService } from "@/database";
+import * as r2 from "@/database/r2";
 
 // Schema imports
 import {
@@ -61,6 +62,12 @@ emailRoutes.openapi(deleteEmailsRoute, async (c) => {
 	if (!domainValidation.valid) return c.json(domainValidation.error, 404);
 
 	const dbService = createDatabaseService(c.env.D1);
+
+	const { ids: emailIds, error: idsError } = await dbService.getEmailIdsByRecipient(emailAddress);
+	if (idsError) return c.json(ERR(idsError.message, "D1Error"), 500);
+
+	await Promise.all(emailIds.map((emailId) => r2.deleteEmailAttachments(c.env.R2, emailId)));
+
 	const { meta, error } = await dbService.deleteEmailsByRecipient(emailAddress);
 
 	if (error) return c.json(ERR(error.message, "D1Error"), 500);
@@ -84,6 +91,10 @@ emailRoutes.openapi(getEmailRoute, async (c) => {
 emailRoutes.openapi(deleteEmailRoute, async (c) => {
 	const { emailId } = c.req.valid("param");
 	const dbService = createDatabaseService(c.env.D1);
+
+	const { error: r2Error } = await r2.deleteEmailAttachments(c.env.R2, emailId);
+	if (r2Error) console.error("Failed to delete R2 attachments for email:", r2Error);
+
 	const { meta, error } = await dbService.deleteEmailById(emailId);
 
 	if (error) return c.json(ERR(error.message, "D1Error"), 500);

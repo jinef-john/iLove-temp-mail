@@ -88,6 +88,22 @@ export async function getEmailById(db: D1Database, emailId: string) {
 }
 
 /**
+ * Get IDs of emails older than a specific timestamp
+ */
+export async function getEmailIdsOlderThan(db: D1Database, timestamp: number) {
+	try {
+		const { results } = await db
+			.prepare("SELECT id FROM emails WHERE received_at < ?")
+			.bind(timestamp)
+			.all<{ id: string }>();
+		return { ids: results.map((row) => row.id), error: undefined };
+	} catch (e: unknown) {
+		const error = e instanceof Error ? e : new Error(String(e));
+		return { ids: [] as string[], error };
+	}
+}
+
+/**
  * Delete emails older than a specific timestamp
  */
 export async function deleteOldEmails(db: D1Database, timestamp: number) {
