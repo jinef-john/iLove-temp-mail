@@ -15,10 +15,7 @@ export async function handleScheduled(
 ) {
 	const cutoffTimestamp = now() - env.HOURS_TO_DELETE_D1 * 60 * 60;
 
-	const { ids: emailIds, error: idsError } = await db.getEmailIdsOlderThan(
-		env.D1,
-		cutoffTimestamp,
-	);
+	const { ids: emailIds, error: idsError } = await db.getEmailIdsOlderThan(env.D1, cutoffTimestamp);
 
 	if (idsError) {
 		const errorMessage = `❌ Email cleanup failed: ${idsError.message}`;
