@@ -2,15 +2,9 @@
 
 Cloudflare Worker that acts as a temporary email inbox.
 
-**API documentation:** [https://api.driftz.net](https://api.driftz.net)
-
-AI-made web client: [https://driftz.net](https://driftz.net)
-
 ## Table of Contents
 
 *   [Features](#features)
-*   [Supporters](#supporters)
-*   [Community](#community-built-stuff)
 *   [Setup Guide](#setup-guide)
     *   [Prerequisites](#prerequisites)
     *   [Project Setup](#project-setup)
@@ -34,35 +28,6 @@ AI-made web client: [https://driftz.net](https://driftz.net)
 *   Provides comprehensive API endpoints for emails and attachments.
 *   Automatically cleans up old emails and attachments.
 *   Supports multiple file types including documents, images, and archives.
-
-## Supporters
-
-A big thank you to individuals who donate domains to support this project. Your contributions help keep this service running.
-
-No domains are configured yet.
-
-| Domain | Donated by |
-| --- | --- |
-
-### How to Donate a Domain
-
-If you have an unused domain and would like to contribute, you can donate it by following these steps:
-
-1.  **Create a Pull Request**: Add your domain and owner information to `config/domains.ts` file in `src` directory.
-2.  **Nameserver Provisioning**: After your pull request, we will provide you with nameservers to update for your domain.
-
----
-
-## Community
-
-Here are some projects built by the community using or integrating with iLove Temp Mail Worker:
-
-*   **Rust Library**: [doomed-neko/tmapi](https://github.com/doomed-neko/tmapi/)
-*   **Go Library**: [blockton/barid](https://github.com/blockton/barid)
-*   **Python Library**: [superhexa/barid-client](https://github.com/superhexa/barid-client)
-*   **CLI App**: [doomed-neko/tmcli](https://github.com/doomed-neko/tmcli)
-
----
 
 ## Setup Guide
 
@@ -241,5 +206,3 @@ bun run deploy
 ### Health Check
 
 - `GET /health` - Service health status
-
-For complete API documentation with examples, visit: [https://api.barid.site](https://api.barid.site)
