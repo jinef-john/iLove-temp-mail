@@ -112,7 +112,7 @@ cloudflare-info/               # Cloudflare information utility
 ## Key Features
 
 ### Email Service
-- **Multiple Domains**: Supports 9+ donated domains (barid.site, vwh.sh, etc.)
+- **Multiple Domains**: Supports donated domains configured in `src/config/domains.ts` (currently empty, awaiting new donations)
 - **Email Storage**: Stores emails in D1 database with full content
 - **HTML Processing**: Converts HTML emails to text with size limits
 - **Automatic Cleanup**: Scheduled deletion of old emails (3-hour retention)

@@ -37,22 +37,12 @@ AI-made web client: [https://driftz.net](https://driftz.net)
 
 ## Supporters
 
-A big thank you to individuals who have donated domains to support this project. Your contributions help keep this service running.
+A big thank you to individuals who donate domains to support this project. Your contributions help keep this service running.
+
+No domains are configured yet.
 
 | Domain | Donated by |
 | --- | --- |
-| `barid.site` | [vwh](https://github.com/vwh) |
-| `vwh.sh` | [vwh](https://github.com/vwh) |
-| `iusearch.lol` | [vwh](https://github.com/vwh) |
-| `lifetalk.us` | [mm6x](https://github.com/mm6x) |
-| `z44d.pro` | [z44d](https://github.com/z44d) |
-| `wael.fun` | [blockton](https://github.com/blockton) |
-| `tawbah.site` | [HprideH](https://github.com/HprideH) |
-| `kuruptd.ink` | [HprideH](https://github.com/HprideH) |
-| `oxno1.space` | [oxno1](https://github.com/oxno1) |
-| `hacktivc.com` | None |
-| `lealaom.xyz` | None |
-| `leala.site` | None |
 
 ### How to Donate a Domain
 

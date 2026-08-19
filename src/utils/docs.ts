@@ -33,16 +33,16 @@ ${`\n${Array.from(DOMAINS_SET)
 	.map((domain) => `- ${domain}`)
 	.join("\n")}`}
 
-**Repository**: [github.com/vwh/temp-mail](https://github.com/vwh/temp-mail)  
-**Issues**: [Report bugs or request features](https://github.com/vwh/temp-mail/issues)
+**Repository**: [github.com/jinef-john/iLove-temp-mail](https://github.com/jinef-john/iLove-temp-mail)  
+**Issues**: [Report bugs or request features](https://github.com/jinef-john/iLove-temp-mail/issues)
 `,
 			contact: {
 				name: "API Support",
-				url: "https://github.com/vwh/temp-mail",
+				url: "https://github.com/jinef-john/iLove-temp-mail",
 			},
 			license: {
 				name: "MIT",
-				url: "https://github.com/vwh/temp-mail/blob/main/LICENSE",
+				url: "https://github.com/jinef-john/iLove-temp-mail/blob/main/LICENSE",
 			},
 		},
 		servers: [
@@ -65,8 +65,8 @@ ${`\n${Array.from(DOMAINS_SET)
 				description: "Get information about supported email domains",
 			},
 		],
-		"x-repository": "https://github.com/vwh/temp-mail",
-		"x-issues": "https://github.com/vwh/temp-mail/issues",
+		"x-repository": "https://github.com/jinef-john/iLove-temp-mail",
+		"x-issues": "https://github.com/jinef-john/iLove-temp-mail/issues",
 	});
 
 	// Swagger UI - Traditional documentation
