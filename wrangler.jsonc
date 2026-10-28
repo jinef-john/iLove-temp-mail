@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "ilove-temp-mail",
+	"name": "temp-mail",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-07-15",
 	"observability": {

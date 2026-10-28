@@ -1,6 +1,6 @@
 // List of supported email domains
 
-export const DOMAINS = [] satisfies {
+export const DOMAINS = [{ owner: "rushfootwear", domain: "rushfootwear.com" }] satisfies {
 	owner: string;
 	domain: string;
 }[];
